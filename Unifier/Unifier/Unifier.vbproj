@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{963D5CA8-D835-4912-B239-8802CBD7FCEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Unifier.My.MyApplication</StartupObject>
+    <RootNamespace>Unifier</RootNamespace>
+    <AssemblyName>Unifier</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Unifier.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Unifier.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\VB\Zipper\Zipper\bin\Debug\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\VB\Zipper\Zipper\bin\Debug\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\Class_DataBit.vb" />
+    <Compile Include="Class_StateManager.vb" />
+    <Compile Include="Project\Classes\FileClass_OldFormatFile_NPCFile.vb" />
+    <Compile Include="Project\Forms\Form_NPCMaker.Designer.vb">
+      <DependentUpon>Form_NPCMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_NPCMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Class_InternetManager.vb" />
+    <Compile Include="Tests\Class_InternetManager_ChatProtocolClient.vb" />
+    <Compile Include="Tests\Class_InternetManager_ChatProtocolServer.vb" />
+    <Compile Include="Tests\Class_InternetManager_ProtocolBaseClass.vb" />
+    <Compile Include="Tests\Class_InternetManager_TCPReceiver.vb" />
+    <Compile Include="Tests\Class_InternetManager_TCPSender.vb" />
+    <Compile Include="Class_ManagedData_Base.vb" />
+    <Compile Include="Class_ManagedData_TaggedData.vb" />
+    <Compile Include="DatasetHandler.vb" />
+    <Compile Include="Project\Classes\FAPIConnectionManager2.vb" />
+    <Compile Include="Project\Classes\FAPIConnectionRequestClass.vb" />
+    <Compile Include="Engine\FileClass.vb" />
+    <Compile Include="Project\Classes\FileClass_AccountFile.vb" />
+    <Compile Include="Project\Classes\FileClass_AccountFileList.vb" />
+    <Compile Include="Engine\CommandLineArgumentInterpreter.vb" />
+    <Compile Include="CommonLibrary.vb" />
+    <Compile Include="FileClassGui.Designer.vb">
+      <DependentUpon>FileClassGui.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileClassGui.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FileClass_Base.vb" />
+    <Compile Include="Project\Classes\FileClass_AbilityFile.vb" />
+    <Compile Include="Project\Classes\FileClass_PlaylistFile.vb" />
+    <Compile Include="Project\Classes\FileClass_WorldFile.vb" />
+    <Compile Include="FolderClass.vb" />
+    <Compile Include="Project\Classes\FolderClass_CurrentAccount.vb" />
+    <Compile Include="Project\Classes\FolderClass_CurrentWorld.vb" />
+    <Compile Include="Tests\Form_ChatBoxOverlay_Options.Designer.vb">
+      <DependentUpon>Form_ChatBoxOverlay_Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_ChatBoxOverlay_Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\Forms\Form_ItemMaker.Designer.vb">
+      <DependentUpon>Form_ItemMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_ItemMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_OnlineControlPanel.Designer.vb">
+      <DependentUpon>Form_OnlineControlPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_OnlineControlPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\Forms\Form_WorldManager.Designer.vb">
+      <DependentUpon>Form_WorldManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_WorldManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageReceivedEventArgs.vb" />
+    <Compile Include="PathClassforKairen.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FormlessForm.Designer.vb">
+      <DependentUpon>FormlessForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FormlessForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\Forms\Form_AbilityMaker.Designer.vb">
+      <DependentUpon>Form_AbilityMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_AbilityMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\Forms\Form_AdventurerMain.Designer.vb">
+      <DependentUpon>Form_AdventurerMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_AdventurerMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_ChatBoxOverlay.Designer.vb">
+      <DependentUpon>Form_ChatBoxOverlay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_ChatBoxOverlay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\Forms\Form_Kairenv2.Designer.vb">
+      <DependentUpon>Form_Kairenv2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Forms\Form_Kairenv2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\Form_LaunchForm_Kairenv2.Designer.vb">
+      <DependentUpon>Form_LaunchForm_Kairenv2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\Form_LaunchForm_Kairenv2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_MusicList.Designer.vb">
+      <DependentUpon>Form_MusicList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_MusicList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_LibraryManager.Designer.vb">
+      <DependentUpon>Form_LibraryManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_LibraryManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_MediaPlaylistMaker.Designer.vb">
+      <DependentUpon>Form_MediaPlaylistMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_MediaPlaylistMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Form_Test_FileBrowser.Designer.vb">
+      <DependentUpon>Form_Test_FileBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Form_Test_FileBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\Form_LaunchForm_Adventurer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\Form_LaunchForm_Adventurer.Designer.vb">
+      <DependentUpon>Form_LaunchForm_Adventurer.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecificLibrary.vb" />
+    <Compile Include="Tests\Start.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PathHandler.vb" />
+    <Compile Include="Tests\TestForm_FTPUploader.Designer.vb">
+      <DependentUpon>TestForm_FTPUploader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TestForm_FTPUploader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\TestForm_OnlineUpdate.Designer.vb">
+      <DependentUpon>TestForm_OnlineUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TestForm_OnlineUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\TestForm_WebReader_FullPage.Designer.vb">
+      <DependentUpon>TestForm_WebReader_FullPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TestForm_WebReader_FullPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\TestForm_ExternalIPFinder.Designer.vb">
+      <DependentUpon>TestForm_ExternalIPFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TestForm_ExternalIPFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FileClassGui.resx">
+      <DependentUpon>FileClassGui.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_NPCMaker.resx">
+      <DependentUpon>Form_NPCMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FormlessForm.resx">
+      <DependentUpon>FormlessForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_AbilityMaker.resx">
+      <DependentUpon>Form_AbilityMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_AdventurerMain.resx">
+      <DependentUpon>Form_AdventurerMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_ChatBoxOverlay.resx">
+      <DependentUpon>Form_ChatBoxOverlay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_ChatBoxOverlay_Options.resx">
+      <DependentUpon>Form_ChatBoxOverlay_Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_ItemMaker.resx">
+      <DependentUpon>Form_ItemMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_Kairenv2.resx">
+      <DependentUpon>Form_Kairenv2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\Form_LaunchForm_Kairenv2.resx">
+      <DependentUpon>Form_LaunchForm_Kairenv2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_MusicList.resx">
+      <DependentUpon>Form_MusicList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_LibraryManager.resx">
+      <DependentUpon>Form_LibraryManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_MediaPlaylistMaker.resx">
+      <DependentUpon>Form_MediaPlaylistMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_OnlineControlPanel.resx">
+      <DependentUpon>Form_OnlineControlPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Form_Test_FileBrowser.resx">
+      <DependentUpon>Form_Test_FileBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\Form_LaunchForm_Adventurer.resx">
+      <DependentUpon>Form_LaunchForm_Adventurer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Forms\Form_WorldManager.resx">
+      <DependentUpon>Form_WorldManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\TestForm_FTPUploader.resx">
+      <DependentUpon>TestForm_FTPUploader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\TestForm_OnlineUpdate.resx">
+      <DependentUpon>TestForm_OnlineUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\TestForm_WebReader_FullPage.resx">
+      <DependentUpon>TestForm_WebReader_FullPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\TestForm_ExternalIPFinder.resx">
+      <DependentUpon>TestForm_ExternalIPFinder.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\Cheat Tables.zip" />
+    <None Include="Resources\Game_Data.zip" />
+    <None Include="Resources\Ihtol.lua" />
+    <None Include="Resources\Items.zip" />
+    <None Include="Resources\LUAs.zip" />
+    <None Include="Resources\Spells.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat Icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
